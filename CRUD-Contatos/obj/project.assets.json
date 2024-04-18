@@ -2345,11 +2345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlos.cunha\\Downloads\\rep\\CRUD-Contatos\\CRUD-Contatos.csproj",
+      "projectUniqueName": "C:\\Users\\carlos.cunha\\Downloads\\CRUD-Contatos\\CRUD-Contatos\\CRUD-Contatos.csproj",
       "projectName": "CRUD-Contatos",
-      "projectPath": "C:\\Users\\carlos.cunha\\Downloads\\rep\\CRUD-Contatos\\CRUD-Contatos.csproj",
+      "projectPath": "C:\\Users\\carlos.cunha\\Downloads\\CRUD-Contatos\\CRUD-Contatos\\CRUD-Contatos.csproj",
       "packagesPath": "C:\\Users\\carlos.cunha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlos.cunha\\Downloads\\rep\\CRUD-Contatos\\obj\\",
+      "outputPath": "C:\\Users\\carlos.cunha\\Downloads\\CRUD-Contatos\\CRUD-Contatos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

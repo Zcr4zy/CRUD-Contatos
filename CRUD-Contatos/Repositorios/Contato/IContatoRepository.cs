@@ -16,5 +16,7 @@ namespace CRUD_Contatos.Repositorios.Contato
 
         bool Deletar(int id);
 
+        
+
     }
 }

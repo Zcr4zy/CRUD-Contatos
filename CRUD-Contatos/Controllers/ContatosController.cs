@@ -119,5 +119,17 @@ namespace CRUD_Contatos.Controllers
         }
 
 
+        public IActionResult Detalhes(int id){
+            try{
+                ContatoModel contato =_contatoRepository.BuscaPorId(id);
+                return View(contato);
+            }
+            catch (Exception ex){
+                throw new Exception(ex.Message);
+            }
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

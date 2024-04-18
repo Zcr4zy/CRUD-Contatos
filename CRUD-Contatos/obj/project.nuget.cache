@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tsCy27UaQNRjd2HFkhpPc5mc9upTBwBYLQpFT60hKPljpIqfef+gCW3y0gt4kZz/VJ30gmJMg0w0QVGpbGoAUg==",
+  "dgSpecHash": "dBWhCxTSKNPybWGuAHCUerOBGrJPwgWd11I7Ns2/i5X0ds3zxns2KJ7r072w5cZzHdex6eCCdV6fuWnVQDep4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlos.cunha\\Downloads\\rep\\CRUD-Contatos\\CRUD-Contatos.csproj",
+  "projectFilePath": "C:\\Users\\carlos.cunha\\Downloads\\CRUD-Contatos\\CRUD-Contatos\\CRUD-Contatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlos.cunha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\carlos.cunha\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
