@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="~/css/Home.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="title-grande" >
+        <a asp-controller="Contatos" asp-action="Index">Sistema de Contatos</a>
+    </div>
+
+    
+    <p class="bem-vindo">Seja Bem-Vindo(a)</p>
+    <br />
+    <p>Este site em MVC trata-se de um projeto criado para prática de conceitos relacionados a um CRUD em C#, sendo assim, aborda os conceitos de Create (Criação), Read (Leitura), Update (Atualização) e Delete (Remoção) de contatos.</p>
+    <a role="button" class="btn btn-dark botao-para-direita" asp-controller="Contatos" asp-action="Index">Para Prosseguir, clique aqui</a>
+</body>
+</html>
+
+
+

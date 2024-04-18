@@ -1,0 +1,68 @@
+﻿@model ContatoModel
+@{
+    ViewData["Title"] = "Cadastro de Contatos";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div style="display:grid;align-items:center;text-align:center; border: 2px solid white; border-radius: 20px; padding: 5% 5%;margin-top:5%">
+        <div>
+            @if (TempData["Erro"] != null)
+            {
+                <div class="alert alert-danger" role="alert" id="meuAlerta" style="border-radius: 15px; position:relative; margin-top: 20px;">
+                    ERRO! Há Campos Faltando ou Com Informações Incorretas!
+                    <button type="button" class="btn btn-danger btn-sm close-alert" style="border-radius: 15px; position:absolute; right:5px; top:5px;" data-dismiss="alert">
+                        X
+                    </button>
+                </div>
+            }
+            <h1 class="display-4" style="color:white">
+                Cadastrar Contatos
+            </h1>
+            
+        </div>
+        
+        <form style="color:white" asp-controller="Contatos" asp-action="Criar" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nome</label>
+                <input type="text" class="form-control" placeholder="Insira o Nome do Contato" asp-for="Nome">
+                @Html.ValidationMessageFor(x => x.Nome, "", new { @class = "customValidationError" })
+                <br /><br />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">E-mail</label>
+                <input type="email" class="form-control" placeholder="Insira o E-mail do Contato" asp-for="Email">
+                @Html.ValidationMessageFor(x => x.Email, "", new {@class = "customValidationError"})
+                <br /><br />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Contato Celular</label>
+                <input type="text" class="form-control" placeholder="Insira o Celular do Contato" asp-for="Celular">
+                @Html.ValidationMessageFor(x => x.Celular, "", new { @class = "customValidationError" })
+                <br /><br />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Endereço</label>
+                <input type="text" class="form-control" placeholder="Insira o Endereço do Contato" asp-for="Endereco">
+                @Html.ValidationMessageFor(x => x.Endereco, "", new { @class = "customValidationError" })
+                <br /><br />
+            </div>
+
+            <br />
+
+            <div class="btn-group-vertical">
+                <button type="submit" class="btn btn-success">Cadastrar</button><br />
+                <a class="btn btn-dark" role="button" asp-controller="Contatos" asp-action="Index">Retornar</a>
+            </div>
+            
+            
+        </form>
+    </div>
+    
+
+</body>
+</html>

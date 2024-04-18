@@ -1,0 +1,80 @@
+body{
+    background-image: url('../img/Mountain2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-size: 17px
+}
+
+tr {
+    border: 3px solid rgb(137,124,206);
+    animation: alternateColors 5s linear infinite;
+}
+
+th{
+    font-size:21px
+}
+
+table {
+    border: 3px solid rgb(137,124,206);
+    color: white;
+    border-radius: 20px;
+    animation: alternateColors 5s linear infinite;
+}
+
+.table-container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: changeColor 2s  infinite alternate;
+   
+}
+
+@keyframes alternateColors {
+    0% {
+        border-color: rgb(137,124,206); 
+    }
+
+    50% {
+        border-color: rgb(69,186,196);
+    }
+
+    100% {
+        border-color: rgb(137,124,206);
+    }
+}
+
+
+input{
+    text-align:center;
+
+}
+
+
+/*Corpo do ScrollBar*/
+*::-webkit-scrollbar {
+    background-image: url('../img/Mountain2.jpg');
+    background-size: cover;
+}
+
+/*Barra de Rolagem do Scrollbar*/
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+*::-webkit-input-placeholder {
+    text-align:center;
+}
+
+.customValidationError{
+    color:red
+}
+

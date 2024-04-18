@@ -1,0 +1,48 @@
+.title-grande, .title-grande a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 80px;
+    font-family: fantasy;
+    color: rgb(107,59,171);
+}
+
+
+p{
+    color: white;
+    text-align: center;
+}
+
+
+.bem-vindo {
+    text-align: center;
+    color: white;
+    margin-top: 7%;
+    margin-bottom: -2%
+}
+
+.botao-para-direita{
+    position:fixed;
+    right:5%;
+    background-color: rgb(107,59,171);
+    animation: trocaDeCoresButton 2s infinite ease-in-out;
+    color: white;
+}
+
+
+
+
+
+@keyframes trocaDeCoresButton {
+    0% {
+        background-color: rgb(107,59,171);
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: rgb(107,59,171);
+    }
+}

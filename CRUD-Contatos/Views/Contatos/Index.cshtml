@@ -1,0 +1,87 @@
+﻿@model List<ContatoModel>
+@{
+    ViewData["Title"] = "Contatos";  
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <br />
+    <div style="text-align: center;">
+        <a asp-controller="Contatos" asp-action="Criar" class="btn btn-dark" role="button" style="display: inline-block; width: 40%;background-color:blueviolet">Cadastrar Contatos</a> 
+        @if (TempData["Cadastrado"] != null)
+        {
+            <div class="alert alert-success" role="alert" id="meuAlerta" style="border-radius: 15px; position:fixed; top:auto; right:0px; margin-top: 20px;width:20%">
+                @TempData["Cadastrado"]
+                <button type="button" class="btn btn-success btn-sm close-alert" style="border-radius: 15px; position:absolute; right:5px; top:5px;" data-dismiss="alert">
+                    X
+                </button>
+            </div>
+            
+        }
+
+        @if (TempData["Editado"] != null)
+        {
+            <div class="alert alert-success" role="alert" id="meuAlerta" style="border-radius: 15px; position:fixed; top:auto; right:0px; margin-top: 20px;width:20%">
+                @TempData["Editado"]
+                <button type="button" class="btn btn-success btn-sm close-alert" style="border-radius: 15px; position:absolute; right:5px; top:5px;" data-dismiss="alert">
+                    X
+                </button>
+            </div>
+        }
+
+        @if (TempData["Deletado"] != null)
+        {
+            <div class="alert alert-success" role="alert" id="meuAlerta" style="border-radius: 15px; position:fixed; top:auto; right:0px; margin-top: 20px;width:20%">
+                @TempData["Deletado"]
+                <button type="button" class="btn btn-success btn-sm close-alert" style="border-radius: 15px; position:absolute; right:5px; top:5px;" data-dismiss="alert">
+                    X
+                </button>
+            </div>
+        }
+    </div>
+    <br /><br />
+    <div class="table-container">
+        <table class="table table-striped table-active">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Data de Criação</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contato in Model)
+                {
+                    <tr>
+                        <th scope="row">@contato.Id</th>
+                        <td>@contato.Nome</td>
+                        <td>@contato.Email</td>
+                        <td>@contato.Celular</td>
+                        <td>@contato.DataCriacao</td>
+                        <td>
+                            <div class="" role="group">
+                                <a role="button" class="btn btn-dark" style="margin-right:10%; padding: 2% 6%;background-color:blueviolet" asp-controller="Contatos" asp-action="Editar" asp-route-id="@contato.Id">Editar</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="" role="group">
+                                <a role="button" class="btn btn-dark" style="margin-right:10%; padding: 2% 6%; background-color:blueviolet" asp-controller="Contatos" asp-action="DeletarConfirmacao" asp-route-id="@contato.Id">Deletar</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
