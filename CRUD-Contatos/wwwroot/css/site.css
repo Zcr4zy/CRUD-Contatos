@@ -20,3 +20,45 @@ html {
 body {
     margin-bottom: 60px;
 }
+
+.formExibicao{
+    color:white;
+    border: 3px solid white;
+    margin-top: 10%;
+    align-items: center;
+    display:grid;
+
+}
+
+    .formExibicao h1 {
+        color: white;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .direita {
+        position: fixed;
+        right: 10%;
+    }
+
+    .esquerda {
+        position: fixed;
+        left: 10%;
+    }
+
+    .formExibicao {
+        font-size: 20px;
+        left: 10%
+    }
+
+    .p-esquerdo{
+        margin-left: 1%
+    }
+
+    .botao-retorno-detalhes {
+        text-align: center;
+        display: grid;
+        align-items: center;
+        background-color: blueviolet;
+        border: 3px solid white;
+    }

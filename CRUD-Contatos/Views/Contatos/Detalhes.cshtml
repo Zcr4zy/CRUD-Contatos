@@ -1,11 +1,44 @@
+@model ContatoModel
+@{
+    ViewData["Title"] = $"Detalhes de {Model.Nome}";
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+    <link rel="stylesheet" href="/wwwroot/css/site.css">
 </head>
 <body>
-    teste
+    
+    <div class="formExibicao">
+        <h1 class="display-4"><b>@Model.Nome</b></h1>
+
+        <br /><br />
+        <div >
+            <p class="esquerda"><b>Data de Criação:</b> @Model.DataCriacao</p>
+            @if(Model.DataModificacao == null)
+            {
+                <p class="direita"><b>Última Modificação:</b> não modificado!</p>
+            }
+            else
+            {
+                <p class="direita"><b>Última Modificação:</b> @Model.DataModificacao</p>
+            }
+                       
+        </div><br /><br />
+        
+        <p class="p-esquerdo"><b>E-mail:</b> @Model.Email</p>
+        <p class="p-esquerdo"><b>Contato Celular:</b> @Model.Celular</p>
+        <p class="p-esquerdo"><b>Endereço:</b> @Model.Endereco</p>
+        
+        
+    </div>
+    
+    <br />
+    <a class="btn btn-dark botao-retorno-detalhes" role="button" asp-controller="Contatos" asp-action="Index">Retornar</a>
+
 </body>
 </html>
